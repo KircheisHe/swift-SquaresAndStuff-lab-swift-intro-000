@@ -1,8 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,12 +22,49 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SpaceShip" translatesAutoresizingMaskIntoConstraints="NO" id="qlP-sB-DDE">
+                                <rect key="frame" x="0.0" y="20" width="375" height="167"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AlbertEinstein" translatesAutoresizingMaskIntoConstraints="NO" id="YwS-QM-lSQ">
+                                <rect key="frame" x="129" y="140.5" width="117" height="117"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YwS-QM-lSQ" secondAttribute="height" multiplier="1:1" id="WEU-hh-0Qn"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Albert Einstein" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Aq-OX-c0B">
+                                <rect key="frame" x="100.5" y="265.5" width="174.5" height="38"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <size key="shadowOffset" width="1" height="2"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="2Aq-OX-c0B" firstAttribute="top" secondItem="YwS-QM-lSQ" secondAttribute="bottom" constant="8" id="2cb-Ew-U8W"/>
+                            <constraint firstItem="YwS-QM-lSQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="CYd-7K-oBg"/>
+                            <constraint firstItem="2Aq-OX-c0B" firstAttribute="centerX" secondItem="YwS-QM-lSQ" secondAttribute="centerX" id="NFm-nI-xBL"/>
+                            <constraint firstItem="qlP-sB-DDE" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Rdl-BV-raL"/>
+                            <constraint firstItem="qlP-sB-DDE" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailing" id="aNl-dN-zMj"/>
+                            <constraint firstItem="YwS-QM-lSQ" firstAttribute="top" secondItem="qlP-sB-DDE" secondAttribute="bottom" multiplier="0.75" id="fty-Kb-vSF"/>
+                            <constraint firstItem="qlP-sB-DDE" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.25" id="imT-fx-bdc"/>
+                            <constraint firstItem="qlP-sB-DDE" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="sXA-bM-djV"/>
+                            <constraint firstItem="YwS-QM-lSQ" firstAttribute="height" secondItem="qlP-sB-DDE" secondAttribute="height" multiplier="0.7" id="xpD-ol-gTk"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="profileImageView" destination="YwS-QM-lSQ" id="Tet-VI-Kr1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="399.19999999999999" y="388.15592203898052"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="AlbertEinstein" width="300" height="320"/>
+        <image name="SpaceShip" width="900" height="563"/>
+    </resources>
 </document>
